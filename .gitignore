@@ -1,0 +1,22 @@
+# intellij
+.idea
+*.iml
+out/
+
+# maven
+target/
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.lnk
+
+# Log
+*.log
+*.out
