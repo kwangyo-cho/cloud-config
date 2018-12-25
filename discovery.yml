@@ -1,1 +1,11 @@
 spring.banner.location: classpath:banner/framework.txt
+
+eureka.client:
+  serviceUrl.defaultZone: http://discovery.kkazo.net/eureka/
+  healthCheck.enable: true
+  registryFetchIntervalSeconds: 5
+  registerWithEureka: true	# 유레카 서버 등록 여부
+  allowRedirects: true		# 클라이언트의 요청을 클러스터로 리디렉션
+  fetchRegistry: false		# 서버의 등록정보 조회 여부
+
+management.security.enabled: false
