@@ -1,2 +1,26 @@
 
 management.security.enabled: false
+
+#--------------------------------------------------------------
+# Auth Server
+#--------------------------------------------------------------
+
+spring:
+  h2:
+    console.path: /myconsole
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:sample;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    type: com.zaxxer.hikari.HikariDataSource
+    initialize: true
+    schema: classpath:/schema/schema.sql
+    data: classpath:/schema/data.sql
+    hikari:
+      connection-test-query: SELECT 1
+      minimum-idle: 1
+      maximum-pool-size: 5
+      pool-name: wins database pool with hikari
+      connection-timeout: 60000
